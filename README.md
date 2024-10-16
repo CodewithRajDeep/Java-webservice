@@ -96,7 +96,7 @@ This project is a simple, scalable, and efficient Java-based RESTful web service
 Unzip the downloaded project and open it in your favorite IDE (e.g., IntelliJ IDEA, Eclipse).
 2. Create a REST Controller
 ```
-<details>  
+<divide>  
  <summary><code>REST Controller</code></summary>
 package com.example.demo.controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -111,7 +111,7 @@ public class HelloController {
         return "Hello, " + name;
       }
     }
-</details>
+</divide>
 ```
 
 3. Run the Application: Once you have the basic structure in place, you can run the application:
@@ -238,6 +238,5 @@ Issued : Copyright (c)| 2024 Deep Raj
 <img src="https://i0.wp.com/www.animefeminist.com/wp-content/uploads/2018/06/type-happy-dog-motivate.gif?fit=309%2C233&ssl=1" width="256" height="256"/>
 <img src="https://i0.wp.com/www.animefeminist.com/wp-content/uploads/2018/06/pitch-baseball-explode-nichijou.gif?resize=500%2C281&ssl=1" width="256" height="256"/>
 
-## <a name="deployment">❄️ Deployment</a> 
  
 
