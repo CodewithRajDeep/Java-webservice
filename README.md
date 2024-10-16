@@ -95,10 +95,9 @@ This project is a simple, scalable, and efficient Java-based RESTful web service
    ```
 Unzip the downloaded project and open it in your favorite IDE (e.g., IntelliJ IDEA, Eclipse).
 2. Create a REST Controller
-
-  <details>  
+```
+<details>  
  <summary><code>REST Controller</code></summary>
-typescript
 package com.example.demo.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -110,9 +109,10 @@ public class HelloController {
     @GetMapping("/hello/{name}")
     public String sayHello(@PathVariable String name) {
         return "Hello, " + name;
+      }
     }
-}
 </details>
+```
 
 3. Run the Application: Once you have the basic structure in place, you can run the application:
  Using your IDE: Right-click on the main application class (annotated with @SpringBootApplication) and select Run.
