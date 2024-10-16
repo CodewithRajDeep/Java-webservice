@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from LuggageCalculatorService WSDL service -->
+
+  <service name="LuggageCalculator" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://my_package_application.com"/>
+      <parameter name="wsdlServiceElement" value="LuggageCalculatorService"/>
+      <parameter name="schemaQualified" value="http://my_package_application.com"/>
+      <parameter name="wsdlServicePort" value="LuggageCalculator"/>
+      <parameter name="className" value="com.my_package_application.LuggageCalculator"/>
+      <parameter name="wsdlPortType" value="LuggageCalculator"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://my_package_application.com" name="main" qname="operNS:main" soapAction="">
+        <parameter xmlns:pns="http://my_package_application.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:args" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://my_package_application.com" xmlns:retNS="http://my_package_application.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="calculateCharge" qname="operNS:calculateCharge" returnQName="retNS:calculateChargeReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://my_package_application.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:weight" type="tns:double"/>
+      </operation>
+      <parameter name="allowedMethods" value="main calculateCharge"/>
+
+  </service>
+</deployment>
