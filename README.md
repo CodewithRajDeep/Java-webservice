@@ -191,6 +191,7 @@ class HelloControllerTest {
    ```
 6. Dependencies
    ```
+   add in pom.xml
    <divide>
    <section>
    <dependency>
